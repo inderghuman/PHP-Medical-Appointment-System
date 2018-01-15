@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">{{ Auth::user()->fname }}'s Profile</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -13,25 +13,21 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Hi, please select from the available options below:<br><br>
     
                     <!-- Link for the admin -->
                     @role('admin')
-                        <a href="/rooms" type="button" class="btn btn-primary">Manage Rooms</a>
-                        <a href="/timeslots" type="button" class="btn btn-primary">Manage Timeslots</a>
+                        <span class="label label-danger">Admin</span>
                     @endrole
 
                     <!-- Link for doctors -->
                     @role('doctor')
-                        <a href="/rooms" type="button" class="btn btn-primary">Attach/Detach Timeslots</a>
-                        
+                        <span class="label label-success">Doctor</span>
                     @endrole
 
                     <!-- Link for patients -->
                     @role('admin|doctor')
                     @else
-                        <a href="/timeslots" type="button" class="btn btn-primary">Profile</a>
+                        <span class="label label-primary">Patient</span>
                     @endrole
                     
                 </div>
