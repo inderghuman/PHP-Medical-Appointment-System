@@ -23,4 +23,12 @@ class Room extends Model
         return $this->belongsTo('App\Branch')
             ->select(['id','name']);
     }
+
+    /**
+     * Get the timeslots created for this room.
+     */
+    public function timeslots()
+    {
+        return $this->hasMany('App\Timeslot');
+    }
 }

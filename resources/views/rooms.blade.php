@@ -57,7 +57,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+                        <div class="form-group{{ $errors->has('room_no') ? ' has-error' : '' }}">
                             <label for="room_no" class="col-md-4 control-label">Room Number</label>
 
                             <div class="col-md-6">

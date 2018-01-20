@@ -18,6 +18,7 @@
     
                     <!-- Link for the admin -->
                     @role('admin')
+                        <a href="/branches" type="button" class="btn btn-primary">Manage Branches</a>
                         <a href="/rooms" type="button" class="btn btn-primary">Manage Rooms</a>
                         <a href="/timeslots" type="button" class="btn btn-primary">Manage Timeslots</a>
                     @endrole
